@@ -34,7 +34,10 @@ body {
 }
 
 body {
+  display: grid;
+  place-content: center;
   font-family: 'JetBrainsMono-Bold';
+  min-height: 100vh;
   accent-color: var(--accent);
   background: var(--dark-grey);
 }

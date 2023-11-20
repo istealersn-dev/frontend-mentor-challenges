@@ -1,0 +1,27 @@
+.rangeSlider {
+    display: grid;
+    gap: 1.5625rem;
+}
+
+.rangeSlider input[type="range"] {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    font-weight: 700;
+}
+
+.sliderVal {
+    font-size: 2rem;
+    line-height: 2.6875rem;
+    color: var(--accent);
+}
+
+.inputRange {
+    width: 100%;
+}

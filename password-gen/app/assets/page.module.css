@@ -1,0 +1,10 @@
+.container {
+    text-align: center;
+    margin-bottom: 1.9375rem;
+}
+
+.heading {
+    font-size: 1.5rem;
+    line-height: 1.9375rem;
+    font-weight: 700;
+}

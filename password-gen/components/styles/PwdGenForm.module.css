@@ -3,9 +3,54 @@
     place-content: center;
 }
 
+.frmcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 33.75rem;
+    gap: 1.9375rem;
+}
+
+.pwdText {
+    position: relative;
+}
+
 .textInput {
     width: 100%;
     font-size: 2rem;
     padding: 1.1875rem 2rem;
+    background-color: var(--grey);
     color: var(--offwhite);
+    border: none;
+}
+
+.textInput::placeholder {
+    opacity: 0.25;
+}
+
+.svg {
+    position: absolute;
+    cursor: pointer;
+    top: 1.75rem;
+    right: 1.75rem;
+}
+
+.svg:hover path {
+    fill: white;
+}
+
+.pwdCriteria {
+    display: grid;
+    gap: 2rem;
+    background-color: var(--grey);
+    color: var(--offwhite);
+    padding: 1.5rem 2rem 2rem;
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1875rem;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    font-weight: 700;
 }

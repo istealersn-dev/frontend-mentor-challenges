@@ -1,3 +1,61 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./app/assets/page.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+.page_container__KusyY {
+    text-align: center;
+    margin-bottom: 1.9375rem;
+}
+
+.page_heading__KxrsD {
+    font-size: 1.5rem;
+    line-height: 1.9375rem;
+    font-weight: 700;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/styles/Checkbox.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.Checkbox_container__bxOjh {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.Checkbox_container__bxOjh input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/styles/RangeSlider.module.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+.RangeSlider_rangeSlider__TzzCb {
+    display: grid;
+    grid-gap: 1.5625rem;
+    gap: 1.5625rem;
+}
+
+.RangeSlider_rangeSlider__TzzCb input[type="range"] {
+    cursor: pointer;
+}
+
+.RangeSlider_container__oykUe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    font-weight: 700;
+}
+
+.RangeSlider_sliderVal__RQxjl {
+    font-size: 2rem;
+    line-height: 2.6875rem;
+    color: var(--accent);
+}
+
+.RangeSlider_inputRange__WnGwc {
+    width: 100%;
+}
 /*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/styles/Strength.module.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************/
@@ -43,9 +101,55 @@
     place-content: center;
 }
 
+.PwdGenForm_frmcontainer__CA2IO {
+    display: flex;
+    flex-direction: column;
+    width: 33.75rem;
+    gap: 1.9375rem;
+}
+
+.PwdGenForm_pwdText__KV81t {
+    position: relative;
+}
+
 .PwdGenForm_textInput__D0_NM {
     width: 100%;
     font-size: 2rem;
     padding: 1.1875rem 2rem;
+    background-color: var(--grey);
     color: var(--offwhite);
+    border: none;
+}
+
+.PwdGenForm_textInput__D0_NM::placeholder {
+    opacity: 0.25;
+}
+
+.PwdGenForm_svg___7x5y {
+    position: absolute;
+    cursor: pointer;
+    top: 1.75rem;
+    right: 1.75rem;
+}
+
+.PwdGenForm_svg___7x5y:hover path {
+    fill: white;
+}
+
+.PwdGenForm_pwdCriteria__r4bFc {
+    display: grid;
+    grid-gap: 2rem;
+    gap: 2rem;
+    background-color: var(--grey);
+    color: var(--offwhite);
+    padding: 1.5rem 2rem 2rem;
+}
+
+.PwdGenForm_checkboxes__LkodD {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1875rem;
+    font-size: 1.125rem;
+    line-height: 1.4375rem;
+    font-weight: 700;
 }
