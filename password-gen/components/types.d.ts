@@ -1,6 +1,10 @@
+import { ReactEventHandler } from "react"
+
 export interface CheckboxProps {
-    id: string;
-    children: React.ReactNode
+    id: string
+    checked: boolean
+    onChange: React.ChangeEventHandler<HTMLInputElement>
+    label: string
 }
 
 export interface RangeSliderProps {
@@ -8,8 +12,4 @@ export interface RangeSliderProps {
     min: number
     max: number
     value?: number
-}
-
-export interface StrengthProps {
-    status: string
 }

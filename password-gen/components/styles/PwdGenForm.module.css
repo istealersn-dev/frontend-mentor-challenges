@@ -54,3 +54,39 @@
     line-height: 1.4375rem;
     font-weight: 700;
 }
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    background-color: var(--accent);
+    padding: 1.3125rem 1.25rem;
+    border: .125rem solid transparent;
+}
+
+.btn button {
+    font-family: inherit;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4375rem;
+    text-transform: uppercase;
+    color: var(--dark-grey);
+}
+
+.btn:hover {
+    border-color: var(--accent);
+    background-color: var(--grey);
+}
+
+.btn:hover button {
+    color: var(--accent);
+}
+
+.btn:hover svg path {
+    fill: var(--accent);
+}
