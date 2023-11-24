@@ -24,6 +24,7 @@
 .Checkbox_container__bxOjh input[type="checkbox"] {
     width: 1.25rem;
     height: 1.25rem;
+    cursor: pointer;
 }
 /*!************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./components/styles/RangeSlider.module.css ***!
@@ -63,11 +64,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     font-size: 1.125rem;
     text-transform: uppercase;
     background-color: var(--dark-grey);
     color: var(--grey);
-    padding: 1.4375rem 1.9688rem 1.3125rem 2rem;
+    padding: 1.3125rem 1.9688rem 1.1875rem 2rem;
+    max-width: 29.75rem;
+    height: 4.5rem;
 }
 
 .Strength_status__3D_kL {
@@ -75,6 +79,7 @@
     flex-direction: row;
     align-items: center;
     gap: .9688rem;
+    color: transparent;
 }
 
 .Strength_statusmessage__a22_0 {
@@ -152,4 +157,40 @@
     font-size: 1.125rem;
     line-height: 1.4375rem;
     font-weight: 700;
+}
+
+.PwdGenForm_btn__yxBa8 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    background-color: var(--accent);
+    padding: 1.3125rem 1.25rem;
+    border: .125rem solid transparent;
+}
+
+.PwdGenForm_btn__yxBa8 button {
+    font-family: inherit;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4375rem;
+    text-transform: uppercase;
+    color: var(--dark-grey);
+}
+
+.PwdGenForm_btn__yxBa8:hover {
+    border-color: var(--accent);
+    background-color: var(--grey);
+}
+
+.PwdGenForm_btn__yxBa8:hover button {
+    color: var(--accent);
+}
+
+.PwdGenForm_btn__yxBa8:hover svg path {
+    fill: var(--accent);
 }
