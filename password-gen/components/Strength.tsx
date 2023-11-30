@@ -38,8 +38,6 @@ export const Strength = ({ strength }: StrengthProps) => {
     <div className={styles.container}>
       Strength
       <div className={styles.status}>
-        {" "}
-        {strength}
         <span className={styles.statusmessage}>{strengthMessage}</span>
         <div className={styles.statusboxes}>{spanElements}</div>
       </div>
