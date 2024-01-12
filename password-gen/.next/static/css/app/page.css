@@ -205,6 +205,14 @@
     opacity: 0.25;
 }
 
+.PwdGenForm_pwdText__KV81t span {
+    position: absolute;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
 .PwdGenForm_svg___7x5y {
     position: absolute;
     cursor: pointer;
@@ -214,6 +222,11 @@
 
 .PwdGenForm_svg___7x5y:hover path {
     fill: white;
+}
+
+.PwdGenForm_svg___7x5y span {
+    display: none;
+    right: 2.75rem;
 }
 
 .PwdGenForm_pwdCriteria__r4bFc {
@@ -244,25 +257,25 @@
     background-color: var(--accent);
     padding: 1.3125rem 1.25rem;
     border: .125rem solid transparent;
-}
-
-.PwdGenForm_btn__yxBa8 button {
+    cursor: pointer;
     font-family: inherit;
-    background: none;
-    border: none;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.4375rem;
     text-transform: uppercase;
+}
+
+.PwdGenForm_btn__yxBa8 button {
+    background: none;
+    border: none;
+
+    cursor: pointer;
     color: var(--dark-grey);
 }
 
 .PwdGenForm_btn__yxBa8:hover {
     border-color: var(--accent);
     background-color: var(--grey);
-}
-
-.PwdGenForm_btn__yxBa8:hover button {
     color: var(--accent);
 }
 

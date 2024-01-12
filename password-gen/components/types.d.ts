@@ -11,5 +11,7 @@ export interface RangeSliderProps {
     id: string
     min: number
     max: number
-    value?: number
+    value: number
+    onChange: React.ChangeEventHandler<HTMLInputElement>
+    onValueChange?: (value:number) => void
 }
