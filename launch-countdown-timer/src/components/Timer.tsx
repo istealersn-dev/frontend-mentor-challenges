@@ -9,26 +9,42 @@ export const TimerI = () => {
                 <div className='timer__card'>
                     <div className='timer__card-visual'>
                         <div className='timer__card-elements'>
-                        <div className='absolute'>
-                            <div></div>
-                            <div></div>
-                        </div>
+                            <div className='line'>                        </div>
+                            <div className='circle'></div>
                         <span className='timer__card-num'>08</span>
-                        </div>
                     </div>
-                    <span className='timer__card-val'>days</span>
-                </div>
-                <div className='timer__card'> 
-                    <span className=''>23</span>
-                    <span className='timer__card-val'>hours</span>
+                    </div>
+                    <p  className='timer__card-val'>days</p>
                 </div>
                 <div className='timer__card'>
-                    <span className=''>55</span>
-                    <span className='timer__card-val'>minutes</span>
+                    <div className='timer__card-visual'>
+                        <div className='timer__card-elements'>
+                            <div className='line'>                        </div>
+                            <div className='circle'></div>
+                        <span className='timer__card-num'>23</span>
+                    </div>
+                    </div>
+                    <p  className='timer__card-val'>hours</p>
                 </div>
                 <div className='timer__card'>
-                    <span className=''>41</span>
-                    <span className='timer__card-val'>seconds</span>
+                    <div className='timer__card-visual'>
+                        <div className='timer__card-elements'>
+                            <div className='line'>                        </div>
+                            <div className='circle'></div>
+                        <span className='timer__card-num'>55</span>
+                    </div>
+                    </div>
+                    <p  className='timer__card-val'>minutes</p>
+                </div>
+                <div className='timer__card'>
+                    <div className='timer__card-visual'>
+                        <div className='timer__card-elements'>
+                            <div className='line'>                        </div>
+                            <div className='circle'></div>
+                        <span className='timer__card-num'>41</span>
+                    </div>
+                    </div>
+                    <p  className='timer__card-val'>seconds</p>
                 </div>
             </div>
         </section>

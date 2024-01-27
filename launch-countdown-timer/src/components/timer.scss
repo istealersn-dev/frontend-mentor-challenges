@@ -19,12 +19,33 @@ span {
     gap: .5625rem;
 
     &-elements {
-        width: 100%;
-        height: 100%;
         position: relative;
+        height: inherit;
+        width: inherit;
+        border-radius: inherit;
+        overflow: hidden;
+        background-image: linear-gradient(to bottom, rgba(black, 0.1506) 50%, transparent 50%);
 
-        > * {
+        .line {
             position: absolute;
+            top: 50%;
+            opacity: 0.253;
+            width: 100%;
+            height: .0296rem;
+            background-color: black;
+            z-index: 10;
+        }
+
+        .circle {
+            position: absolute;
+            top: 46%;
+            left: -5%;
+            width: .375rem;
+            height: .375rem;
+            border-radius: 100%;
+            background-color: $very-dark-mostly-black-blue;
+            box-shadow: 70px 0 0px $very-dark-mostly-black-blue;
+            z-index: 10;
         }
     }
 
@@ -42,7 +63,10 @@ span {
         color: $soft-red;
         letter-spacing: -0.0675rem;
         border-radius: .25rem;
-        padding: 14px 11px;
+        inset: 0;
+        padding: 11px;
+        position: absolute;
+        z-index: 1;
     }
 
     &-val {
