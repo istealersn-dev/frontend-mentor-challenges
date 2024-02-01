@@ -1,9 +1,14 @@
-@use '../styles/variables.scss' as *;
+@use '../styles/variables' as *;
+@use '../styles/breakpoints' as *;
 
 .timer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+
+    @include breakpoint-1440 {
+        gap: 2rem;
+    }
 }
 
 span {
@@ -17,6 +22,10 @@ span {
     justify-content: center; 
     align-items: center;
     gap: .5625rem;
+
+    @include breakpoint-1440 {
+        gap: 1rem;
+    }
 
     &-elements {
         position: relative;
@@ -34,6 +43,10 @@ span {
             height: .0296rem;
             background-color: black;
             z-index: 10;
+
+            @include breakpoint-1440 {
+                height: .0625rem;
+            }
         }
 
         .circle {
@@ -46,6 +59,12 @@ span {
             background-color: $very-dark-mostly-black-blue;
             box-shadow: 70px 0 0px $very-dark-mostly-black-blue;
             z-index: 10;
+
+            @include breakpoint-1440 {
+                width: .75rem;
+                height: .75rem;
+                box-shadow: 148px 0 0px $very-dark-mostly-black-blue;
+            }
         }
     }
 
@@ -55,6 +74,11 @@ span {
         border-radius: .5rem;
         background-color: $dark-desaturated-blue;
         box-shadow: 0 5px 0 0px black;
+
+        @include breakpoint-1440 {
+            width: 9.25rem;
+            height: 9.375rem;
+        }
     }
 
     &-num {
@@ -67,6 +91,13 @@ span {
         padding: 11px;
         position: absolute;
         z-index: 1;
+
+        @include breakpoint-1440 {
+            font-size: 5rem;
+            letter-spacing: -0.15rem;
+            line-height: 4.4375rem;
+            padding: 2.1875rem 1.375rem;
+        }
     }
 
     &-val {
@@ -75,5 +106,11 @@ span {
         font-size: .4375rem;
         font-weight: $font-weight;
         letter-spacing: .185rem;
+
+        @include breakpoint-1440 {
+            font-size: .875rem;
+            line-height: 1.1875rem;
+            letter-spacing: .37rem;
+        }
     }
 }
