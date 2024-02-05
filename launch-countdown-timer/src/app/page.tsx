@@ -1,11 +1,15 @@
-import { TimerI } from "@/components/Timer";
-import Image from "next/image";
+
+import { CountdownTimer } from '@/components/CountdownTimer';
 import '../styles/main.scss'
 
-export default function Home() {
+const target = '2024-02-20T23:00:00'
+const timerLabels = ['days', 'hours', 'minutes', 'seconds']
+
+export default function Home() { 
+
   return (
     <main className="container">
-      <TimerI />
+      <CountdownTimer targetDate={target} labels={timerLabels}/>
     </main>
   );
 }

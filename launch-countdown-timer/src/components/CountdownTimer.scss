@@ -16,6 +16,7 @@ span {
 }
 
 .timer__card {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr;
     place-content: center;
@@ -69,11 +70,17 @@ span {
     }
 
     &-visual {
+        position: relative;
         width: 4.375rem;
         height: 4.375rem;
         border-radius: .5rem;
         background-color: $dark-desaturated-blue;
         box-shadow: 0 5px 0 0px black;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: rotateX(180deg);
+        }
 
         @include breakpoint-1440 {
             width: 9.25rem;
@@ -91,6 +98,7 @@ span {
         padding: 11px;
         position: absolute;
         z-index: 1;
+        backface-visibility: hidden;
 
         @include breakpoint-1440 {
             font-size: 5rem;
@@ -113,4 +121,8 @@ span {
             letter-spacing: .37rem;
         }
     }
+}
+
+.timer__card.flipped .timer__card-visual {
+    transform: rotateX(180deg);
 }
