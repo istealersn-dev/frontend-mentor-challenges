@@ -4,47 +4,47 @@ import { useEffect, useState } from "react"
 import "./CountdownTimer.scss";
 
 interface CountdownTimerProps {
-    targetDate: string // Format: 'YYYY-MM-DDTHH:mm:ss'
+    targetDate: string // Format: 'YYYY-MM-DDTHH:mm:ss' - The target date and time for the countdown timer.
     labels: string[]
 }
 
+// Calculates the time left until the target date and returns an array of days, hours, minutes, and seconds.
 const calculateTimeLeft = (targetDate: Date): number[] => {
     const difference = targetDate.getTime() - new Date().getTime()
 
-    if (difference <= 0 ) {
-        return [0, 0, 0, 0]
-    }
-
-    const timeLeft = [
-        Math.floor(difference / (1000 * 60 * 60 * 24)),
-        Math.floor(difference / (1000 * 60 * 60) % 24),
-        Math.floor(difference / (1000 * 60) % 60),
-        Math.floor(difference / 1000) % 60
+    return difference > 0
+    ? [
+        Math.floor(difference / (1000 * 60 * 60 * 24)), // Days
+        Math.floor(difference / (1000 * 60 * 60) % 24), // Hours
+        Math.floor(difference / (1000 * 60) % 60), // Minutes
+        Math.floor(difference / 1000) % 60 // Seconds
     ]
-
-    return timeLeft
+    :
+    [0, 0, 0, 0] // zeros instead of undefined or null
 }
 
+// CountdownTimer component displays a countdown timer based on the target date and labels provided.
 export const CountdownTimer = ({targetDate, labels}: CountdownTimerProps) => {
-    const [timeLeft, setTimerLeft] = useState(calculateTimeLeft(new Date(targetDate)))
-    const [hasMounted, setHasMounted] = useState(false)
+    const [timeLeft, setTimerLeft] = useState(calculateTimeLeft(new Date(targetDate))) // State to hold the time left until the target date.
+    const [hasMounted, setHasMounted] = useState(false) // State to track if the component has mounted.
 
     useEffect(() => {
-
-        setHasMounted(true)
+        setHasMounted(true) // Set hasMounted to true when the component mounts.
 
         if (hasMounted) {
+            // Update the time left at every second interval.
             const interval = setInterval(() => {
                 setTimerLeft(calculateTimeLeft(new Date(targetDate)))
             }, 1000)
-            
+
+            // Clean up the interval when the component unmounts.
             return () => clearInterval(interval)
         }
-
     }, [targetDate, hasMounted])
 
-    if (!hasMounted) return <div>Loading....</div>
+    if (!hasMounted) return <div>Loading....</div> // Display a loading message if the component has not yet mounted.
 
+    // Render the countdown timer UI.
     return (
         <section>
           <h1>we&apos;re launching soon</h1>
