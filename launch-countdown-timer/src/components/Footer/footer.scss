@@ -1,4 +1,4 @@
-@use '../styles/variables.scss' as *;
+@use '../../styles/variables.scss' as *;
 
 footer {
     width: 100vw;
@@ -7,7 +7,7 @@ footer {
     .social {
         display: grid;
         place-content: center;
-        background-image: url('../images/pattern-hills.svg');
+        background-image: url('../../images/pattern-hills.svg');
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import "./CountdownTimer.scss";
 
 interface CountdownTimerProps {
@@ -27,6 +27,7 @@ const calculateTimeLeft = (targetDate: Date): number[] => {
 export const CountdownTimer = ({targetDate, labels}: CountdownTimerProps) => {
     const [timeLeft, setTimerLeft] = useState(calculateTimeLeft(new Date(targetDate))) // State to hold the time left until the target date.
     const [hasMounted, setHasMounted] = useState(false) // State to track if the component has mounted.
+    const prevTimeLeft = useRef(timeLeft)
 
     useEffect(() => {
         setHasMounted(true) // Set hasMounted to true when the component mounts.
@@ -35,19 +36,18 @@ export const CountdownTimer = ({targetDate, labels}: CountdownTimerProps) => {
             // Update the time left at every second interval.
             const interval = setInterval(() => {
                 setTimerLeft(calculateTimeLeft(new Date(targetDate)))
+                prevTimeLeft.current = timeLeft
             }, 1000)
 
             // Clean up the interval when the component unmounts.
             return () => clearInterval(interval)
         }
-    }, [targetDate, hasMounted])
+    }, [targetDate, hasMounted, timeLeft])
 
     if (!hasMounted) return <div>Loading....</div> // Display a loading message if the component has not yet mounted.
 
     // Render the countdown timer UI.
     return (
-        <section>
-          <h1>we&apos;re launching soon</h1>
           <div className="timer">
             {timeLeft.map((num, index) => (
               <div key={index} className="timer__card">
@@ -55,6 +55,7 @@ export const CountdownTimer = ({targetDate, labels}: CountdownTimerProps) => {
                 <div className="timer__card-elements">              
                   <div className="line"></div>
                   <div className="circle"></div>
+                  <div className={`${num !== prevTimeLeft.current[index] ? 'flipper': ''}`}></div>
                   <span className="timer__card-num">{String(num).padStart(2, '0')}</span>              
                   </div>  
                 </div>
@@ -62,6 +63,5 @@ export const CountdownTimer = ({targetDate, labels}: CountdownTimerProps) => {
                 </div>
             ))}
           </div>
-        </section>
       );
 }
