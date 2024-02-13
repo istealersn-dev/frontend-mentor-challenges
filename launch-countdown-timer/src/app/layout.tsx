@@ -1,10 +1,8 @@
 import { FooterI } from "@/components/Footer/Footer";
 import type { Metadata } from "next";
-import { Red_Hat_Text } from "next/font/google";
 
 import { UserInput } from '@/components/UserInput/UserInput';
-
-const inter = Red_Hat_Text({ subsets: ["latin"] });
+import { fonts } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Launch Countdown Timer",
@@ -42,10 +40,8 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon" />
       </head>
-      <body className={inter.className}>
-        <header>
+      <body className={fonts.redhat.className}>
           <UserInput />
-        </header>
         {children}
         <FooterI 
           socialicontype={socialIcons}

@@ -1,5 +1,7 @@
 'use client'
 
+import { Spin } from "antd"
+
 import { useEffect, useRef, useState } from "react"
 import "./CountdownTimer.scss";
 
@@ -44,7 +46,7 @@ export const CountdownTimer = ({targetDate, labels}: CountdownTimerProps) => {
         }
     }, [targetDate, hasMounted, timeLeft])
 
-    if (!hasMounted) return <div>Loading....</div> // Display a loading message if the component has not yet mounted.
+    if (!hasMounted) return <>Loading</> // Display a loading message if the component has not yet mounted.
 
     // Render the countdown timer UI.
     return (
