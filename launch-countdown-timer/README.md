@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Launch countdown timer solution
 
-## Getting Started
+This is a solution to the [Launch countdown timer challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/launch-countdown-timer-N0XkGfyz-). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Frontend Mentor - Launch countdown timer solution](#frontend-mentor---launch-countdown-timer-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### The challenge
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Users should be able to:
 
-## Learn More
+- See hover states for all interactive elements on the page
+- See a live countdown timer that ticks down every second (start the count at 14 days)
+- **Bonus**: When a number changes, make the card flip from the middle
 
-To learn more about Next.js, take a look at the following resources:
+### Screenshot
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Launch Countdown Timer](https://vercel.com/_next/image?url=%2Fapi%2Fscreenshot%3Fdark%3D1%26deploymentId%3Ddpl_5kh6m3THAAdWFT2XZ7pmMhUPXQHP%26teamId%3Distealersn-dev%26withStatus%3D1&w=640&q=75&dpl=dpl_5imcYuuQ4QRtr4Pt8gsAdJMXqsa5)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Links
 
-## Deploy on Vercel
+- Solution URL: [Add solution URL here](https://github.com/istealersn-dev/frontend-mentor-challenges/tree/main/launch-countdown-timer)
+- Live Site URL: [Add live site URL here](https://launch-countdown-timer-one-bice.vercel.app/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## My process
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Built with
+
+- Semantic HTML5 markup
+- SCSS custom properties
+- SCSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+
+### What I learned
+
+I learned how to implement a live countdown timer using React and enhance the user experience with a card flip animation when a number changes.
+
+###Continued development
+I plan to continue refining my skills in React animations and explore more advanced techniques for countdown timers.
+
+##Useful resources
+Example resource 1 - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+Example resource 2 - This is an amazing article that helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+
+##Author
+Website - Add your name here
+Frontend Mentor - @yourusername
+Twitter - @yourusername

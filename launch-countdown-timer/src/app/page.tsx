@@ -2,7 +2,10 @@
 import { CountdownTimer } from '@/components/CountdownTimer/CountdownTimer';
 import '../styles/main.scss'
 
-const target = '2024-02-12T23:00:00'
+const today = new Date();
+let target = new Date(today)
+target.setDate(target.getDate() + 14)
+
 const timerLabels = ['days', 'hours', 'minutes', 'seconds']
 
 export default function Home() { 
@@ -11,7 +14,7 @@ export default function Home() {
     <main className="container">
       <section>
           <h1>we&apos;re launching soon</h1>
-          <CountdownTimer targetDate={target} labels={timerLabels}/>
+          <CountdownTimer targetDate={target.toISOString()} labels={timerLabels}/>
       </section>
     </main>
   );
