@@ -2,8 +2,6 @@ import { FooterI } from "@/components/Footer/Footer";
 import type { Metadata } from "next";
 import { Red_Hat_Text } from "next/font/google";
 
-import { UserInput } from '@/components/UserInput/UserInput';
-
 const inter = Red_Hat_Text({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -43,9 +41,6 @@ export default function RootLayout({
         <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon" />
       </head>
       <body className={inter.className}>
-        <header>
-          <UserInput />
-        </header>
         {children}
         <FooterI 
           socialicontype={socialIcons}

@@ -7,7 +7,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 
-    @include breakpoint-1440 {
+    @include breakpoint-768 {
         gap: 2rem;
     }
 }
@@ -25,7 +25,7 @@ span {
     align-items: center;
     gap: .5625rem;
 
-    @include breakpoint-1440 {
+    @include breakpoint-768 {
         gap: 1rem;
     }
 
@@ -48,7 +48,7 @@ span {
             background-color: black;
             z-index: 10;
 
-            @include breakpoint-1440 {
+            @include breakpoint-768 {
                 height: .0625rem;
             }
         }
@@ -64,7 +64,7 @@ span {
             box-shadow: 70px 0 0px $very-dark-mostly-black-blue;
             z-index: 10;
 
-            @include breakpoint-1440 {
+            @include breakpoint-768 {
                 width: .75rem;
                 height: .75rem;
                 box-shadow: 148px 0 0px $very-dark-mostly-black-blue;
@@ -93,7 +93,7 @@ span {
         background-color: $dark-desaturated-blue;
         box-shadow: 0 5px 0 0px black;
 
-        @include breakpoint-1440 {
+        @include breakpoint-768 {
             width: 9.25rem;
             height: 9.375rem;
         }
@@ -110,7 +110,7 @@ span {
         position: absolute;
         z-index: 1;
 
-        @include breakpoint-1440 {
+        @include breakpoint-768 {
             font-size: 5rem;
             letter-spacing: -0.15rem;
             line-height: 4.4375rem;
@@ -125,7 +125,7 @@ span {
         font-weight: $font-weight;
         letter-spacing: .185rem;
 
-        @include breakpoint-1440 {
+        @include breakpoint-768 {
             font-size: .875rem;
             line-height: 1.1875rem;
             letter-spacing: .37rem;
