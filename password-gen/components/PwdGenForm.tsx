@@ -5,7 +5,7 @@ import styles from "./styles/PwdGenForm.module.css";
 import Checkbox from "./Checkbox";
 import RangeSlider from "./RangeSlider";
 import { Strength } from "./Strength";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { generatePassword } from "./utils/Genpassword";
 
 export default function PwdGenForm() {
