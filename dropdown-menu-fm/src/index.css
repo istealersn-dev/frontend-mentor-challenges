@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Epilogue', sans-serif;
+  }
+}
+
+*,
+html,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5; /* Ensures vertical rhythm for text elements */
+}
+
+ol,
+ul {
+  list-style: none; /* Removes default list styling */
+}
+
+img {
+  max-width: 100%; /* Ensures images are responsive within their containers */
+}
+
+a {
+  color: inherit; /* Ensures links have the same color as their parent elements */
+  text-decoration: none; /* Removes default underline for links */
+}
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  background-color: transparent;
+  padding: 0;
+}
