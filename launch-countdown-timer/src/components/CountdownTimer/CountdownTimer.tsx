@@ -1,7 +1,5 @@
 'use client'
 
-import { Spin } from "antd"
-
 import { useEffect, useRef, useState } from "react"
 import "./CountdownTimer.scss";
 
