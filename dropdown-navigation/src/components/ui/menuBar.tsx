@@ -4,6 +4,7 @@ import { MenuBarProps, SVGRenderProps } from "../types";
 import menuClose from "@/assets/icon-close-menu.svg";
 import arrowUp from "/src/assets/icon-arrow-up.svg";
 import arrowDown from "/src/assets/icon-arrow-down.svg";
+import { useState } from "react";
 
 export const MenuBar = ({
   menuGroup,
@@ -13,13 +14,24 @@ export const MenuBar = ({
   handleNav
 }: MenuBarProps) => {
 
-  const mobileLayout = "xs:bg-mediumGray";
+  const [groupToggles, setGroupToggles] = useState(
+    Array(menuGroup.length).fill(false)
+  );
+  const mobileLayout = "xs:absolute xs:-top-4 xs:-right-4 xs:bg-almostWhite xs:h-screen xs:w-60 xs:px-6";
+
+  const handleMenu = (groupIndex: number) => {
+    setGroupToggles((prevToggles) => {
+      const newToggles = [...prevToggles];
+      newToggles[groupIndex] = !newToggles[groupIndex];
+      return newToggles;
+    });
+  };
 
   return (
     <>
       {hamNav && (
         <div>
-        <div className="xs:absolute xs:-top-4 xs:-left-4 xs:w-screen xs:h-screen bg-almostBlack opacity-75 transition-all duration-300"></div>
+        <div className="xs:absolute xs:-top-4 xs:-left-4 xs:w-screen xs:opacity-75 xs:h-screen bg-almostBlack"></div>
         <div>
           <Image
             src={menuClose}
@@ -31,26 +43,34 @@ export const MenuBar = ({
         </div>
       )}
       <ul
-        className={`${
-          hamNav ? "block" : "hidden"
-        } xs:absolute xs:-top-4 xs:-right-4 xs:bg-almostWhite xs:opacity-100 xs:h-screen xs:w-60 xs:px-6 text-mediumGray xl:grid lg:grid-cols-12 lg:items-center lg:hover:text-almostBlack transition-all duration-300`}
+        className={`${hamNav ? mobileLayout : ''} ${hamNav ? 'xs:block' : 'xs:hidden'} text-mediumGray xl:grid xl:grid-cols-10 lg:hover:text-almostBlack lg:items-center`}
       >
-        <div className="xs:mt-20 lg:col-span-10">
-          {menuGroup.map((item, index) => (
+        <div className="xs:mt-20 lg:col-span-8 lg:mt-0">
+          {menuGroup.map((group, groupIndex) => (
             <li
-              key={index}
+              key={groupIndex}
               className={` ${
                 hamNav ? "block" : "inline-block"
               } xs:pb-4 lg:pr-10`}
+              onClick={() => handleMenu(groupIndex)}
             >
               <a href="#">
-                {item.name}
+                {group.name}
                 <Image
-                  src={arrowDown}
-                  alt="Arrow down"
+                  src={groupToggles[groupIndex] ? arrowUp : arrowDown}
+                  alt={groupToggles[groupIndex] ? 'Arrow Up' : 'Arrow Down'}
                   className="ml-2 inline"
                 />
               </a>
+              <ul className={`
+                ${groupToggles[groupIndex] ? '' : 'hidden'} lg:absolute lg:shadow-mxl lg:rounded-def lg:bg-almostWhite xs:pt-6 xs:px-6 xs:text-p-sm`}>
+                {group.menuItems.map((val, index) => (
+                  <li key={index} className="xs:pb-4">
+                    {typeof val === 'object' && <SVGRender {...val} />}
+                    <a href="#" className="xs:pl-4">{typeof val === 'object' ? val.name : val}</a>
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
           {otherItems.map((item, index) => (
