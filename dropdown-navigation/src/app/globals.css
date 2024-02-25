@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  line-height: 1.5; /* Ensures vertical rhythm for text elements */
+}
+
+ol,
+ul {
+  list-style: none; /* Removes default list styling */
+}
+
+img {
+  max-width: 100%; /* Ensures images are responsive within their containers */
+}
+
+a {
+  color: inherit; /* Ensures links have the same color as their parent elements */
+  text-decoration: none; /* Removes default underline for links */
+}
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  background-color: transparent;
+  padding: 0;
+}
