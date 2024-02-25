@@ -14,7 +14,6 @@ const epilogue = Epilogue({
 });
 
 const data = (await fetchData()).menuDropdown;
-console.log(data)
 
 export const metadata: Metadata = {
   title: "Intro section with dropdown navigation",
