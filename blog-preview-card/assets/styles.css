@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --primaryColor: hsl(47, 88%, 63%);
+  --neutralWhite: hsl(0, 0%, 100%);
+  --neutralGrey: hsl(0, 0%, 50%);
+  --neutralBlack: hsl(0, 0%, 7%);
+
+  /* Breakpoints for viewports */
+  --modile: 375px;
+  --desktop: 1280px;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name */
+
+.figtree-font {
+  font-family: 'Figtree', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+*,
+::before,
+::after,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  overflow: hidden;
+}
+
+span {
+  display: block;
+}
+
+body {
+  background-color: var(--primaryColor);
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  margin: 0 1.5rem;
+}
+
+.blog__card {
+  display: grid;
+  gap: 1.5rem;
+  background-color: var(--neutralWhite);
+  max-width: 384px;
+  padding: 1.5rem;
+  border: 1px solid var(--neutralBlack);
+  border-radius: 20px;
+  box-shadow: inset -8px -8px 0px 0px var(--neutralBlack);
+}
+
+.blog__card-Image {
+  border-radius: 10px;
+}
+
+.blog__card-Content {
+  display: grid;
+  gap: 0.75rem;
+  line-height: 150%;
+}
+
+.blog__card-Tag {
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 4px;
+  background-color: var(--primaryColor);
+  padding: 0.25rem 0.75rem;
+  width: max-content;
+}
+
+.blog__card-Date {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+h3:hover {
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--neutralGrey);
+}
+
+.blog__card-Author {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.blog__card-Author > img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.blog__card-Author > span {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+@media (min-width: 480px) {
+  /* Styles for desktops and larger screens */
+
+  .blog__card {
+    background-color: var(--neutralWhite);
+    border-radius: 20px;
+    box-shadow: 16px 16px 0px 0px var(--neutralBlack);
+  }
+
+  .blog__card-Tag {
+    font-size: 14px;
+  }
+
+  .blog__card-Date {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
