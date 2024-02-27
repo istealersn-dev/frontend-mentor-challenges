@@ -111,6 +111,22 @@ p {
   font-weight: 800;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 50;
+  margin-bottom: 2rem;
+}
+
+.attribution {
+  font-size: 14px;
+}
+
+.attribution a {
+  color: var(--neutralBlack);
+  font-weight: 800;
+}
+
 @media (min-width: 480px) {
   /* Styles for desktops and larger screens */
 
