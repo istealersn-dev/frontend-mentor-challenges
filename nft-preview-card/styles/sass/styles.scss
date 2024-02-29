@@ -8,19 +8,6 @@
     font-style: normal;
   }
 
-// Breakpoint mixin
-@mixin respond-to($name) {
-    @if map-has-key($breakpoints, $name ) {
-        @media #{inspect(map-get($breakpoints, $name))} {
-            @content;
-        }
-    }
-    // If the key doesn't exist in the map
-    @else {
-        @warn "Invalid value, as it does not exist in `#{$breakpoints}`."
-    }
-};
-
 $font-heading: 1.375rem;
 $font-para: 1.125rem;
 $font-para-lh: 1.625rem;
