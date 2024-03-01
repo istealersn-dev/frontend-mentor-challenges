@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/istealersn-dev/frontend-mentor-challenges/tree/main/testimonials-grid-section](https://your-solution-url.com)
+- Solution URL: [Github Repo](https://github.com/istealersn-dev/frontend-mentor-challenges/tree/main/testimonials-grid-section)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ### Built with

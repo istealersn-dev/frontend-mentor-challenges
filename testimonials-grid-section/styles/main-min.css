@@ -643,6 +643,38 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-right-top {
+  background-position: right top;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-top {
+  background-position: top;
+}
+
+.bg-\[right_top_32px\] {
+  background-position: right top 32px;
+}
+
+.bg-\[right_32px_top\] {
+  background-position: right 32px top;
+}
+
+.bg-\[right_80px_top\] {
+  background-position: right 80px top;
+}
+
+.bg-\[right_1\.5rem_top\] {
+  background-position: right 1.5rem top;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -696,6 +728,10 @@ video {
   font-weight: 600;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .leading-3 {
   line-height: .75rem;
 }
@@ -743,6 +779,10 @@ video {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition {
@@ -881,6 +921,10 @@ video {
     gap: 2rem;
   }
 
+  .xl\:bg-\[right_80px_top\] {
+    background-position: right 80px top;
+  }
+
   .xl\:p-40 {
     padding: 10rem;
   }
@@ -888,6 +932,11 @@ video {
   .xl\:px-40 {
     padding-left: 10rem;
     padding-right: 10rem;
+  }
+
+  .xl\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .xl\:pt-4 {
