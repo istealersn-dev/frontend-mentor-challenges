@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "servor": "^4.0.2"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
   }
 }
