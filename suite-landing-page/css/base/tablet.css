@@ -1,0 +1,12 @@
+@import 'quarks.css';
+
+@media screen and (min-width: 768px) {
+    .container {
+        margin-left: 2.4375rem;
+        margin-right: 2.5rem;
+    }
+
+    header {
+        margin-top: 2.5rem;
+    }
+}

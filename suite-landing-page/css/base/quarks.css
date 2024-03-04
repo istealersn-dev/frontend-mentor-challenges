@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Colors ------- */
+:root {
+
+    /* Primary Colors */
+    --dark-blue: hsl(219, 43%, 16%);
+    --grey: hsl(218, 20%, 36%);
+    --cream: hsl(30, 33%, 93%);
+    --cream-white: hsl(30, 29%, 97%);
+
+    /* Secondary Colors */
+    --indigo: hsl(264, 100%, 69%);
+    --pink: hsl(292, 76%, 54%);
+    --orange: hsl(31, 100%, 65%);
+
+    --btn-gradient: linear-gradient(to right bottom, var(--indigo), var(--pink), var(--orange));
+
+    /* Typography attributes */
+
+    --font-epilogue: "Epilogue", sans-serif;
+
+    --font-2xs: .875rem; /* 14px */
+    --font-xss: .9375rem; /* 15px */
+    --font-xs: 1rem; /* 16px */
+    --font-sm: 1.125rem; /* 18px */
+    --font-md: 1.25rem; /* 20px */
+    --font-lg: 2rem; /* 32px */
+    --font-2lg: 2.375rem;
+    --font-xl: 3rem; /* 48px */
+    --font-xxl: 3.5rem;
+    --font-2xl: 4.5rem; /* 72px */
+
+    --line-height-xss: 1.25rem;
+    --line-height-2xs: 1.5rem;
+    --line-height-xs: 1.625rem;
+    --line-height-xxs: 1.75rem;
+    --line-height-sm: 2rem;
+    --line-height-md: 2.1875rem;
+    --line-height-2md: 2.75rem;
+    --line-height-lg: 3.5rem;
+    --line-height-2lg: 4rem;
+    --line-height-xl: 4.875rem;
+
+    --font-regular: 400;
+    --font-bold: 700;
+
+    /* Heading attributes */
+    --h1-sm-font-size: var(--font-2lg);
+    --h1-sm-line-height: var(--line-height-2md);
+
+    --h1-md-font-size: var(--font-xxl);
+    --h1-md-line-height: var(--line-height-2lg);  
+
+
+    /* Margins */
+    --margin-xss: 0.25rem;
+    --margin-xs: 0.5rem;
+    --margin-sm: 1rem;
+    --margin-md: 1.5rem;
+    --margin-lg: 2rem;
+    --margin-xl: 3rem;
+    --margin-xxl: 3.5rem;
+    --margin-2xl: 4rem;
+
+
+    /* Padding */
+    --padding-xss: 0.25rem;
+    --padding-xs: 0.5rem;
+    --padding-sm: 1rem;
+    --padding-md: 1.5rem;
+    --padding-lg: 2rem;
+    --padding-xl: 3rem;
+}

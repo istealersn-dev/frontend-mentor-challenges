@@ -5,40 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <link rel="stylesheet" href="/dist/styles.min.css">
+  <link rel="stylesheet" href="/css/main.css">
   
   <title>Frontend Mentor | Suite landing page</title>
 </head>
 <body>
-
-  Request Beta Access
-
-  A super solution for your business.
-
-  Our marketing and sales automations help you scale your outreach to 
-  get more leads for your company. 
-
-  Request Beta Access
-
-  2K+
-  Companies
-
-  8
-  Languages
-
-  1.2M
-  Leads
-
-  It just works.
-
-  “I really like how it is an all-in-one solution that handle many of 
-  the tasks that you would normally need separate tools to do the same 
-  job. This thing is a miracle worker.”
-
-  Jeremy Robinson
-  CMO, Fylo
-
-  Copyright - Suite
-
+<header class="container">
+  <div class="logo"><img src="./assets/logo.svg" alt="Suite logo" class="logo" /></div>
+  <button class="btn-secondary">request beta access</button>
+</header>
+<main>
+  <section class="hero container">
+    <div class="hero__copy">
+      <img src="/assets/pattern-curved-line-1.svg" alt="" class="hero__copy--pattern">
+      <h1>A <span class="highlight">super solution</span> for your <span class="highlight">business.</span></h1>
+      <p>Our marketing and sales automations help you scale your outreach to 
+        get more leads for your company.</p>
+        <button class="btn-primary">request beta access</button>
+    </div>
+    <div class="hero__image">
+      <picture>
+        <source media="(min-width: 48rem)" srcset="/assets/image-hero-portrait.webp">
+        <img src="/assets/image-hero-landscape.webp" alt="Hero image" />
+    </picture>
+    </div>
+  </section>
+  <section>
+    <div class="stats">
+      <p class="stats__fig">2K+ <span class="label">companies</span></p>
+      <p class="stats__fig">8 <span class="label">languages</span></p>
+      <p class="stats__fig">1.2M <span class="label">leads</span></p>
+    </div>
+  </section>
+  <section>
+    <div class="testimonial">
+      <div class="testimonial__image">
+        <img src="/assets/image-jeremy-small.png" alt="Jeremy Robinson vector image" class="profile">
+        <img src="/assets/pattern-blur.svg" alt="" class="blur">
+      </div>
+      <div class="testimonial__content">
+        <img src="/assets/pattern-curved-line-2.svg" alt="">
+        <h2>It just <span class="highlight">works.</span></h2>
+        <blockquote>“I really like how it is an all-in-one solution that handle many of 
+          the tasks that you would normally need separate tools to do the same 
+          job. This thing is a miracle worker.”</blockquote>
+          <p><span class="highlight">Jeremy Robinson</span> CMO, Fylo</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="logo"><img src="./assets/logo.svg" alt="Suite logo" class="logo" /></div>
+  <span>Copyright - Suite</span>
+  <div class="social__channel">
+    <img src="/assets/icon-facebook.svg" alt="Facebook logo">
+    <img src="/assets/icon-twitter.svg" alt="Twitter logo">
+    <img src="/assets/icon-instagram.svg" alt="Instagram logo">
+  </div>
+</footer>
 </body>
 </html>

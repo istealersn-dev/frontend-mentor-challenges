@@ -1,0 +1,29 @@
+@import 'quarks.css';
+
+/* Buttons */
+
+.btn-primary {
+    color: var(--cream-white);
+    font-weight: var(--font-bold);
+    font-size: var(--heading-m-font-size);
+    line-height: var(--heading-m-line-height);
+    letter-spacing: -0.0112rem;
+    padding: .9375rem 1.9375rem .875rem 2rem;
+    border-radius: .375rem;
+    background-color: var(--dark-blue);
+    text-transform: capitalize;
+
+}
+
+.btn-secondary {
+    color: var(--dark-blue);
+    font-size: var(--font-2xs);
+    line-height: var(--line-height-2xs);
+    letter-spacing: -0.0088rem;
+    font-weight: var(--font-bold);
+    padding: .75rem 1.0313rem .75rem .9688rem;
+    border-radius: .375rem;
+    border: solid .0625rem var(--dark-blue);
+    background-color: transparent;
+    text-transform: capitalize;
+}
