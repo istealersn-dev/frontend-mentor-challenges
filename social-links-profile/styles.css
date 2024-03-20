@@ -102,6 +102,7 @@ section {
     }
 
     & blockquote {
+      text-align: center;
       color: var(--white);
       font-size: var(--f-size);
       block-size: 1.3125rem;
