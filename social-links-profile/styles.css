@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap");
+
+:root {
+  --inter: "Inter", sans-serif;
+  --f-size: 14px;
+  --line-height: 150%;
+
+  /* Colors */
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+  
+  --spacing: 1.5rem;
+
+  --radius: 12px;
+}
+
+*,
+::before,
+::after,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--inter);
+  line-height: var(--line-height);
+  background-color: var(--off-black);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 1.5rem;
+}
+
+ul {
+  list-style: none;
+
+  & li a {
+    text-decoration: none;
+    font-size: var(--f-size);
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--white);
+    
+    a:hover {
+      background-color: var(--green);
+    }
+  }
+}
+
+section {
+  width: 100%;
+  max-width: 24rem;
+}
+
+.profileCard {
+    display: grid;
+    gap: 1.5rem;
+    padding: var(--spacing);
+    background-color: var(--dark-grey);
+    border-radius: var(--radius);
+
+    & .profileCard-img {
+        margin: auto;
+        width: 88px;
+        height: 88px;
+        border-radius: 100%;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    & .profileCard-text {
+      text-align: center;
+      max-height: 3.8125rem;
+
+      & h1 {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--white);
+        margin-bottom: 1rem;
+      }
+
+      & p {
+        color: var(--green);
+        font-size: var(--f-size);
+        font-weight: 700;
+        block-size: 1.3125rem;
+      }
+    }
+
+    & blockquote {
+      color: var(--white);
+      font-size: var(--f-size);
+      block-size: 1.3125rem;
+    }
+
+    & ul {
+      text-align: center;
+      width: 100%;
+      
+      & li {
+          background-color: var(--grey);
+          padding: 12px;
+          border-radius: 8px;
+          margin-bottom: 1rem;
+          max-height: 2.8125rem;
+      }
+      li:last-child {
+        margin-bottom: 0rem;
+      }
+      li:hover {
+        cursor: pointer;
+        background-color: var(--green);
+        color: var(--grey);
+      }
+      li:hover a {
+        color: var(--grey);
+      }
+    }
+  }
+
+@media (min-width: 400px) {
+  :root {
+     --spacing: 2.5rem; 
+  }
+}
